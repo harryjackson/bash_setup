@@ -8,6 +8,7 @@ bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
 VALIAS=$HOME/.valias
+touch $VALIAS
 alias reload="source $HOME/.zshrc"
 alias valias="vim $HOME/.valias && reload"
 
