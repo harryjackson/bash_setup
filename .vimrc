@@ -18,7 +18,7 @@ set background=dark
 set t_Co=256
 "colorscheme zenburn
 "colorscheme mayansmoke
-colorscheme kolor
+"colorscheme kolor
 "colorscheme molokai
 "colorscheme solarized
 
@@ -152,20 +152,20 @@ endif
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
-Plugin 'wincent/command-t'
+"Plugin 'gmarik/Vundle.vim'
+"Plugin 'bling/vim-airline'
+"Plugin 'wincent/command-t'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/slimv.vim'
-call vundle#end()            " required
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'vim-scripts/slimv.vim'
+"call vundle#end()            " required
 filetype on 
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
