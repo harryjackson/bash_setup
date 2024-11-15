@@ -4,6 +4,14 @@ Open the basic terminal that already is installed, using Cmd+Space
 then type "terminal". Follow instruction [to install brew found here](https://brew.sh/)
 
 
+# SSH Key Generation
+
+```bash
+ssh-keygen -t ed25519 -a 100
+```
+
+Note any changes to the above may change what needs to be in your .zshrc file
+
 # XCode Command Line Tools
 
 Brew normally installs these anyway so if you have brew installed then you're likely fine.
