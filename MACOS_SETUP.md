@@ -1,3 +1,9 @@
+# Lets get brew installed
+
+Open the basic terminal that already is installed, using Cmd+Space 
+then type "terminal". Follow instruction [to install brew found here](https://brew.sh/)
+
+
 # XCode Command Line Tools
 
 Before doing anything lets get XCode command line tools installed
