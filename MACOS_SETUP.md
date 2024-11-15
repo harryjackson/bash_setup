@@ -84,6 +84,18 @@ od -c /etc/synthetic.conf
 and that the /Users/$USER/git directory exists
 
 
+# Vim
+
+Install the .vimrc file and run the following.
+
+```bash
+mkdir -p ~/.vim/tmp
+mkdir -p ~/.vim/backup
+```
+
+All edited files will now be backed up so if you ever make a mistake you can find them here. This has saved me a number of times.
+
+
 # SDKMAN
 
 ```bash
@@ -101,11 +113,15 @@ Install lastpass in Chrome. Most companies have something they're using so insta
 You can export passwords using the password manager. Always delete the csv file
 it creates.
 
+
+
 # Intellij
 
 The ultimate license is based on your Jetbrains account, Download it and login
 to get the license. Do this after chrome password import so it can find the 
 password and save some time.
+
+
 
 # Docker Desktop
 
