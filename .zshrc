@@ -55,40 +55,40 @@ else
 fi
 
 #/etc/hosts editing
-export SSP_VAULT_HOST="vault.ssp"
-export SSP_CONFIG_HOST="config.ssp"
-export SSP_ADMIN_HOST="admin.ssp"
-export SSP_GATEWAY_HOST="gateway.ssp"
-export SSP_DISCOVER_HOST="discover.ssp"
-export SSP_TOOL_HOST="tool.ssp"
-export SSP_SERVICE_HOST="service.ssp"
-export SSP_EUREKA_DEFAULT_ZONE="http://$LOCAL_IP_ADDR:8761/eureka/"
+#export SSP_VAULT_HOST="vault.ssp"
+#export SSP_CONFIG_HOST="config.ssp"
+#export SSP_ADMIN_HOST="admin.ssp"
+#export SSP_GATEWAY_HOST="gateway.ssp"
+#export SSP_DISCOVER_HOST="discover.ssp"
+#export SSP_TOOL_HOST="tool.ssp"
+#export SSP_SERVICE_HOST="service.ssp"
+#export SSP_EUREKA_DEFAULT_ZONE="http://$LOCAL_IP_ADDR:8761/eureka/"
 
-export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
+#export GOPATH=$HOME/go
+#export GOBIN=$GOPATH/bin
 
-function resetip() {
-    export LOCAL_IP_ADDR=$(ipconfig getifaddr en0);
-    perl -pi -e "s/(.*)vault.ssp/$LOCAL_IP_ADDR vault.ssp/ if /vault.ssp/" /etc/hosts
-    perl -pi -e "s/(.*)config.ssp/$LOCAL_IP_ADDR config.ssp/ if /config.ssp/" /etc/hosts
-    perl -pi -e "s/(.*)discover.ssp/$LOCAL_IP_ADDR discover.ssp/ if /discover.ssp/" /etc/hosts
-    perl -pi -e "s/(.*)admin.ssp/$LOCAL_IP_ADDR admin.ssp/ if /admin.ssp/" /etc/hosts
-    perl -pi -e "s/(.*)gateway.ssp/$LOCAL_IP_ADDR gateway.ssp/ if /gateway.ssp/" /etc/hosts
-    perl -pi -e "s/(.*)tool.ssp/$LOCAL_IP_ADDR tool.ssp/ if /tool.ssp/" /etc/hosts
-    perl -pi -e "s/(.*)service.ssp/$LOCAL_IP_ADDR service.ssp/ if /service.ssp/" /etc/hosts
-}
-# sudo requires interactive zsh shell in order to get the $VARIABLES
-sudo zsh -c "$(functions); resetip"
+#function resetip() {
+#    export LOCAL_IP_ADDR=$(ipconfig getifaddr en0);
+#    perl -pi -e "s/(.*)vault.ssp/$LOCAL_IP_ADDR vault.ssp/ if /vault.ssp/" /etc/hosts
+#    perl -pi -e "s/(.*)config.ssp/$LOCAL_IP_ADDR config.ssp/ if /config.ssp/" /etc/hosts
+#    perl -pi -e "s/(.*)discover.ssp/$LOCAL_IP_ADDR discover.ssp/ if /discover.ssp/" /etc/hosts
+#    perl -pi -e "s/(.*)admin.ssp/$LOCAL_IP_ADDR admin.ssp/ if /admin.ssp/" /etc/hosts
+#    perl -pi -e "s/(.*)gateway.ssp/$LOCAL_IP_ADDR gateway.ssp/ if /gateway.ssp/" /etc/hosts
+#    perl -pi -e "s/(.*)tool.ssp/$LOCAL_IP_ADDR tool.ssp/ if /tool.ssp/" /etc/hosts
+#    perl -pi -e "s/(.*)service.ssp/$LOCAL_IP_ADDR service.ssp/ if /service.ssp/" /etc/hosts
+#}
+## sudo requires interactive zsh shell in order to get the $VARIABLES
+#sudo zsh -c "$(functions); resetip"
 
-export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/go/bin:$PATH"
+#export PATH="/usr/local/bin:$PATH"
+#export PATH="$HOME/go/bin:$PATH"
 
-export SPRING_CLOUD_VAULT_TOKEN=00000000-0000-0000-0000-000000000000
-export VAULT_ADDR=http://127.0.0.1:8200
-export VAULT_TOKEN=$SPRING_CLOUD_VAULT_TOKEN
-export VAULT_LOG_LEVEL=debug
-export ENCRYPT_KEY=$SPRING_CLOUD_VAULT_TOKEN
-export SSP_CONFIG_SERVER="http://$LOCAL_IP_ADDR:8888/"
-export SSP_ADMIN_SERVER="http://$LOCAL_IP_ADDR:8081"
-export SSP_EUREKA_SERVER="http://$LOCAL_IP_ADDR:8761/eureka"
-export SSP_DISCOVER_SERVER="http://$LOCAL_IP_ADDR:8761/eureka"
+#export SPRING_CLOUD_VAULT_TOKEN=00000000-0000-0000-0000-000000000000
+#export VAULT_ADDR=http://127.0.0.1:8200
+#export VAULT_TOKEN=$SPRING_CLOUD_VAULT_TOKEN
+#export VAULT_LOG_LEVEL=debug
+#export ENCRYPT_KEY=$SPRING_CLOUD_VAULT_TOKEN
+#export SSP_CONFIG_SERVER="http://$LOCAL_IP_ADDR:8888/"
+#export SSP_ADMIN_SERVER="http://$LOCAL_IP_ADDR:8081"
+##export SSP_EUREKA_SERVER="http://$LOCAL_IP_ADDR:8761/eureka"
+#export SSP_DISCOVER_SERVER="http://$LOCAL_IP_ADDR:8761/eureka"
